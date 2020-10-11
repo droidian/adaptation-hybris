@@ -14,22 +14,35 @@ Depends: ${misc:Depends},
          lxc-android,
          libhybris,
          pulseaudio-modules-droid,
-         bluebinder,
          phosh-config-hwcomposer,
 Description: adaptation hybris base metapackage
 
 Package: adaptation-hybris-phone
 Architecture: all
 Depends: ${misc:Depends},
-         adaptation-hybris,
+         adaptation-hybris (= ${binary:Version}),
          ofono,
+Description: adaptation hybris phone metapackage
+
+Package: adaptation-hybris-api28-phone
+Architecture: all
+Depends: ${misc:Depends},
+         adaptation-hybris (= ${binary:Version}),
+         adaptation-hybris-phone (= ${binary:Version}),
          ofono-ril-binder-plugin,
 Description: adaptation hybris phone metapackage
+
+Package: adaptation-hybris-api28
+Architecture: all
+Depends: ${misc:Depends},
+         adaptation-hybris (= ${binary:Version}),
+         bluebinder,
+Description: adaptation hybris gsi28 metapackage
 
 Package: adaptation-hybris-devtools
 Architecture: all
 Depends: ${misc:Depends},
-         adaptation-hybris,
+         adaptation-hybris (= ${binary:Version}),
          libhybris-test,
          hybris-usb,
-Description: adaptation hybris phone metapackage
+Description: adaptation hybris devtools metapackage
