@@ -33,6 +33,15 @@ Depends: ${misc:Depends},
          ofono-config-ril-binder,
 Description: adaptation hybris phone metapackage
 
+Package: adaptation-hybris-api28-phone-dual-sim
+Architecture: all
+Depends: ${misc:Depends},
+         adaptation-hybris-api28-phone (= ${binary:Version}),
+         ofono-config-ril-binder-dual-sim,
+Description: Base metapackage for hybris-api28 adaptations (Dual sim support)
+ This metapackage depends on the required packages
+ to allow Dual Sim support.
+
 Package: adaptation-hybris-api28
 Architecture: all
 Depends: ${misc:Depends},
