@@ -30,6 +30,7 @@ Depends: ${misc:Depends},
          adaptation-hybris (= ${binary:Version}),
          adaptation-hybris-phone (= ${binary:Version}),
          ofono-ril-binder-plugin,
+         ofono-config-ril-binder,
 Description: adaptation hybris phone metapackage
 
 Package: adaptation-hybris-api28
