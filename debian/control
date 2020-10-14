@@ -14,15 +14,16 @@ Depends: ${misc:Depends},
          lxc-android,
          libhybris,
          pulseaudio-modules-droid,
+         pulseaudio-config-droid,
          phosh-config-hwcomposer,
-Description: adaptation hybris base metapackage
+Description: Base metapackage for hybris adaptations
 
 Package: adaptation-hybris-phone
 Architecture: all
 Depends: ${misc:Depends},
          adaptation-hybris (= ${binary:Version}),
          ofono,
-Description: adaptation hybris phone metapackage
+Description: Metapackage for hybris phones
 
 Package: adaptation-hybris-api28-phone
 Architecture: all
@@ -31,7 +32,7 @@ Depends: ${misc:Depends},
          adaptation-hybris-phone (= ${binary:Version}),
          ofono-ril-binder-plugin,
          ofono-config-ril-binder,
-Description: adaptation hybris phone metapackage
+Description: Metapackage for hybris-api28 phones
 
 Package: adaptation-hybris-api28-phone-dual-sim
 Architecture: all
