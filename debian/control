@@ -24,6 +24,8 @@ Architecture: all
 Depends: ${misc:Depends},
          adaptation-hybris (= ${binary:Version}),
          ofono,
+         phosh-config-ofono,
+         hybris-mobian-quirks-calls-config-ofono,
 Description: Metapackage for hybris phones
 
 Package: adaptation-hybris-api28-phone
