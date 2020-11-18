@@ -10,6 +10,7 @@ Vcs-Git: https://github.com/hybris-mobian-releng/adaptation-hybris
 Package: adaptation-hybris
 Architecture: all
 Depends: ${misc:Depends},
+	 hybris-mobian-quirks-writable-image,
 	 android-base-passwd,
 	 android-base-files,
          udev,
