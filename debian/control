@@ -32,6 +32,7 @@ Depends: ${misc:Depends},
          ofono,
          phosh-config-ofono,
          hybris-mobian-quirks-calls-config-ofono,
+         audiosystem-passthrough,
 Description: Metapackage for hybris phones
 
 Package: adaptation-hybris-api28-phone
@@ -41,6 +42,7 @@ Depends: ${misc:Depends},
          adaptation-hybris-phone (= ${binary:Version}),
          ofono-ril-binder-plugin,
          ofono-config-ril-binder,
+         pulseaudio-modules-droid-hidl,
 Description: Metapackage for hybris-api28 phones
 
 Package: adaptation-hybris-api28-phone-dual-sim
