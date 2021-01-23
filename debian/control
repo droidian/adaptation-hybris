@@ -23,6 +23,7 @@ Depends: ${misc:Depends},
          udev-config-hybris,
          hadess-sensorfw-proxy,
          hybris-mobian-quirks-hybris-gl,
+         gstreamer1.0-droid,
 Description: Base metapackage for hybris adaptations
 
 Package: adaptation-hybris-phone
