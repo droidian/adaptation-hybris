@@ -62,6 +62,7 @@ Architecture: all
 Depends: ${misc:Depends},
          adaptation-hybris (= ${binary:Version}),
          bluebinder,
+         timekeeper,
 Description: adaptation hybris gsi28 metapackage
 
 Package: adaptation-hybris-devtools
