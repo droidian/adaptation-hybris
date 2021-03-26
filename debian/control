@@ -4,13 +4,13 @@ Section: misc
 Priority: optional
 Build-Depends: debhelper (>= 10)
 Standards-Version: 4.5.0.3
-Vcs-Browser: https://github.com/hybris-mobian/adaptation-hybris
-Vcs-Git: https://github.com/hybris-mobian-releng/adaptation-hybris
+Vcs-Browser: https://github.com/droidian/adaptation-hybris
+Vcs-Git: https://github.com/droidian-releng/adaptation-hybris
 
 Package: adaptation-hybris
 Architecture: all
 Depends: ${misc:Depends},
-	 hybris-mobian-quirks-writable-image,
+	 droidian-quirks-writable-image,
 	 android-base-passwd,
 	 android-base-files,
          udev,
@@ -22,7 +22,7 @@ Depends: ${misc:Depends},
          phosh-config-hwcomposer,
          udev-config-hybris,
          hadess-sensorfw-proxy,
-         hybris-mobian-quirks-hybris-gl,
+         droidian-quirks-hybris-gl,
          gstreamer1.0-droid,
          package-sideload,
          flash-bootimage,
@@ -34,7 +34,7 @@ Depends: ${misc:Depends},
          adaptation-hybris (= ${binary:Version}),
          ofono,
          phosh-config-ofono,
-         hybris-mobian-quirks-calls-config-ofono,
+         droidian-quirks-calls-config-ofono,
          audiosystem-passthrough,
 Description: Metapackage for hybris phones
 
