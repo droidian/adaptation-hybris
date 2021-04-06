@@ -33,7 +33,7 @@ Architecture: all
 Depends: ${misc:Depends},
          adaptation-hybris (= ${binary:Version}),
          ofono,
-         phosh-config-ofono,
+         ofono2mm,
          droidian-quirks-calls-config-ofono,
          audiosystem-passthrough,
 Description: Metapackage for hybris phones
