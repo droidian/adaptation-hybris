@@ -67,6 +67,30 @@ Depends: ${misc:Depends},
          timekeeper,
 Description: adaptation hybris gsi28 metapackage
 
+Package: adaptation-hybris-api29-phone
+Architecture: all
+Depends: ${misc:Depends},
+         adaptation-hybris-api28-phone (= ${binary:Version}),
+Description: Base metapackage for hybris-api28 adaptations (Phone functionalities)
+ This package depends on the required packages
+ to allow phone functionalities work on API 29 devices.
+
+Package: adaptation-hybris-api29-phone-dual-sim
+Architecture: all
+Depends: ${misc:Depends},
+         adaptation-hybris-api28-phone-dual-sim (= ${binary:Version}),
+Description: Base metapackage for hybris-api29 adaptations (Dual sim support)
+ This package depends on the required packages
+ to allow Dual Sim support on API 29 devices.
+
+Package: adaptation-hybris-api29
+Architecture: all
+Depends: ${misc:Depends},
+         adaptation-hybris-api28 (= ${binary:Version}),
+Description: Base metapackage for hybris-api28 adaptations
+ This package depends on the required packages
+ to allow Droidian work on API 29 devices.
+
 Package: adaptation-hybris-devtools
 Architecture: all
 Depends: ${misc:Depends},
