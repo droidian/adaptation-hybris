@@ -27,7 +27,7 @@ Depends: ${misc:Depends},
          gstreamer1.0-droid,
          package-sideload,
          flash-bootimage,
-         droidian-quirks-wlan-wcnss,
+         droidian-quirks-device,
 Description: Base metapackage for hybris adaptations
 
 Package: adaptation-hybris-phone
