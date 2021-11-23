@@ -31,6 +31,9 @@ Depends: ${misc:Depends},
          flash-bootimage,
          droidian-quirks-device,
          flashlightd,
+         flatpak-hybris,
+         flatpak-extension-gl-hybris,
+         flatpak-extension-gl-hybris-tls-padding,
 Description: Base metapackage for hybris adaptations
 
 Package: adaptation-hybris-phone
