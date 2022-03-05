@@ -57,6 +57,11 @@ COMMON_16_29_PACKAGES = [
 	"pulseaudio-modules-droid-jb2q",
 ]
 
+# Common packages for api levels 30+ (11+)
+COMMON_30_PACKAGES = [
+	"pulseaudio-modules-droid-modern",
+]
+
 # Common packages for api levels 26+ (8+)
 COMMON_26_PACKAGES = [
 	"bluebinder",
@@ -93,6 +98,11 @@ SUPPORTED_APILEVELS = {
 	},
 	29 : {
 		"standard"       : COMMON_16_PACKAGES + COMMON_16_29_PACKAGES + COMMON_26_PACKAGES,
+		"phone"          : COMMON_26_PHONE_PACKAGES,
+		"phone-dual-sim" : COMMON_26_DUAL_SIM_PACKAGES,
+	},
+	30 : {
+		"standard"       : COMMON_16_PACKAGES + COMMON_30_PACKAGES + COMMON_26_PACKAGES,
 		"phone"          : COMMON_26_PHONE_PACKAGES,
 		"phone-dual-sim" : COMMON_26_DUAL_SIM_PACKAGES,
 	},
