@@ -50,6 +50,7 @@ COMMON_DEVTOOLS_PACKAGES = [
 COMMON_16_PACKAGES = [
 	"adaptation-hybris (= ${binary:Version})",
 	"pulseaudio-config-droid",
+	"droidian-quirks-api%(level)d",
 ]
 
 # Common packages for api levels 16 through 29 (4.1 to 29)

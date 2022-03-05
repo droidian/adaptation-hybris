@@ -63,6 +63,7 @@ Package: adaptation-hybris-api28
 Architecture: any
 Depends: adaptation-hybris (= ${binary:Version}),
          pulseaudio-config-droid,
+         droidian-quirks-api28,
          pulseaudio-modules-droid-jb2q,
          bluebinder,
          timekeeper
@@ -101,6 +102,7 @@ Package: adaptation-hybris-api29
 Architecture: any
 Depends: adaptation-hybris (= ${binary:Version}),
          pulseaudio-config-droid,
+         droidian-quirks-api29,
          pulseaudio-modules-droid-jb2q,
          bluebinder,
          timekeeper
@@ -139,6 +141,7 @@ Package: adaptation-hybris-api30
 Architecture: any
 Depends: adaptation-hybris (= ${binary:Version}),
          pulseaudio-config-droid,
+         droidian-quirks-api30,
          pulseaudio-modules-droid-modern,
          bluebinder,
          timekeeper
