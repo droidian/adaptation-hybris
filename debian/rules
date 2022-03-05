@@ -3,3 +3,8 @@
 %:
 	dh $@
 
+
+debian/control: debian/gencontrol.py debian/control.head
+	python3 debian/gencontrol.py
+
+.PHONY: debian/control

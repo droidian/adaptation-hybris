@@ -1,3 +1,6 @@
+# This file is generated automatically - edit gencontrol.py to add
+# new dependencies
+
 Source: adaptation-hybris
 Maintainer: Giuseppe Corti (r3vn) <giuseppe.corti@protonmail.com>
 Section: misc
@@ -5,20 +8,17 @@ Priority: optional
 Build-Depends: debhelper (>= 10)
 Standards-Version: 4.5.0.3
 Vcs-Browser: https://github.com/droidian/adaptation-hybris
-Vcs-Git: https://github.com/droidian-releng/adaptation-hybris
+Vcs-Git: https://github.com/droidian/adaptation-hybris
 
 Package: adaptation-hybris
 Architecture: any
-Depends: ${misc:Depends},
-	 droidian-quirks-writable-image,
-	 android-base-passwd,
-	 android-base-files,
+Depends: droidian-quirks-writable-image,
+         android-base-passwd,
+         android-base-files,
          udev,
          lxc-android,
          libhybris,
          libhybris-utils,
-         pulseaudio-modules-droid,
-         pulseaudio-config-droid,
          phosh-config-hwcomposer,
          udev-config-hybris,
          hadess-sensorfw-proxy,
@@ -33,74 +33,102 @@ Depends: ${misc:Depends},
          flashlightd,
          flatpak-hybris,
          flatpak-extension-gl-hybris,
-         flatpak-extension-gl-hybris-tls-padding,
-Description: Base metapackage for hybris adaptations
+         flatpak-extension-gl-hybris-tls-padding
+Description: Base metapackage for adaptation-hybris adaptations (standard variant)
+ This package depends on the required packages
+ to allow Droidian work on Android devices.
 
 Package: adaptation-hybris-phone
-Architecture: all
-Depends: ${misc:Depends},
-         adaptation-hybris (= ${binary:Version}),
+Architecture: any
+Depends: adaptation-hybris (= ${binary:Version}),
          ofono,
          ofono-scripts,
-         ofono2mm,
-         audiosystem-passthrough,
-Description: Metapackage for hybris phones
+         ofono2mm
+Description: Base metapackage for adaptation-hybris adaptations (phone variant)
+ This package depends on the required packages
+ to allow Droidian work on Android devices.
 
+Package: adaptation-hybris-devtools
+Architecture: any
+Depends: adaptation-hybris (= ${binary:Version}),
+         libhybris-test,
+         hybris-usb
+Description: Base metapackage for adaptation-hybris adaptations (devtools variant)
+ This package depends on the required packages
+ to allow Droidian work on Android devices.
+
+Provides: adaptation-hybris-apispecific-standard
+Conflicts: adaptation-hybris-apispecific-standard
+Package: adaptation-hybris-api28
+Architecture: any
+Depends: adaptation-hybris (= ${binary:Version}),
+         pulseaudio-config-droid,
+         pulseaudio-modules-droid-jb2q,
+         bluebinder,
+         timekeeper
+Description: Base metapackage for adaptation-hybris-api28 adaptations (standard variant)
+ This package depends on the required packages
+ to allow Droidian work on API 28 devices.
+
+Provides: adaptation-hybris-apispecific-phone
+Conflicts: adaptation-hybris-apispecific-phone
 Package: adaptation-hybris-api28-phone
-Architecture: all
-Depends: ${misc:Depends},
-         adaptation-hybris (= ${binary:Version}),
+Architecture: any
+Depends: adaptation-hybris (= ${binary:Version}),
          adaptation-hybris-phone (= ${binary:Version}),
+         adaptation-hybris-api28 (= ${binary:Version}),
          ofono-ril-binder-plugin,
          ofono-config-ril-binder,
          pulseaudio-modules-droid-hidl,
-Description: Metapackage for hybris-api28 phones
+         audiosystem-passthrough
+Description: Base metapackage for adaptation-hybris-api28 adaptations (phone variant)
+ This package depends on the required packages
+ to allow Droidian work on API 28 devices.
 
+Provides: adaptation-hybris-apispecific-phone-dual-sim
+Conflicts: adaptation-hybris-apispecific-phone-dual-sim
 Package: adaptation-hybris-api28-phone-dual-sim
-Architecture: all
-Depends: ${misc:Depends},
-         adaptation-hybris-api28-phone (= ${binary:Version}),
-         ofono-config-ril-binder-dual-sim,
-Description: Base metapackage for hybris-api28 adaptations (Dual sim support)
- This metapackage depends on the required packages
- to allow Dual Sim support.
-
-Package: adaptation-hybris-api28
-Architecture: all
-Depends: ${misc:Depends},
-         adaptation-hybris (= ${binary:Version}),
-         bluebinder,
-         timekeeper,
-Description: adaptation hybris gsi28 metapackage
-
-Package: adaptation-hybris-api29-phone
-Architecture: all
-Depends: ${misc:Depends},
-         adaptation-hybris-api28-phone (= ${binary:Version}),
-Description: Base metapackage for hybris-api28 adaptations (Phone functionalities)
+Architecture: any
+Depends: adaptation-hybris-api28-phone (= ${binary:Version}),
+         ofono-config-ril-binder-dual-sim
+Description: Base metapackage for adaptation-hybris-api28 adaptations (phone-dual-sim variant)
  This package depends on the required packages
- to allow phone functionalities work on API 29 devices.
+ to allow Droidian work on API 28 devices.
 
-Package: adaptation-hybris-api29-phone-dual-sim
-Architecture: all
-Depends: ${misc:Depends},
-         adaptation-hybris-api28-phone-dual-sim (= ${binary:Version}),
-Description: Base metapackage for hybris-api29 adaptations (Dual sim support)
- This package depends on the required packages
- to allow Dual Sim support on API 29 devices.
-
+Provides: adaptation-hybris-apispecific-standard
+Conflicts: adaptation-hybris-apispecific-standard
 Package: adaptation-hybris-api29
-Architecture: all
-Depends: ${misc:Depends},
-         adaptation-hybris-api28 (= ${binary:Version}),
-Description: Base metapackage for hybris-api28 adaptations
+Architecture: any
+Depends: adaptation-hybris (= ${binary:Version}),
+         pulseaudio-config-droid,
+         pulseaudio-modules-droid-jb2q,
+         bluebinder,
+         timekeeper
+Description: Base metapackage for adaptation-hybris-api29 adaptations (standard variant)
  This package depends on the required packages
  to allow Droidian work on API 29 devices.
 
-Package: adaptation-hybris-devtools
-Architecture: all
-Depends: ${misc:Depends},
-         adaptation-hybris (= ${binary:Version}),
-         libhybris-test,
-         hybris-usb,
-Description: adaptation hybris devtools metapackage
+Provides: adaptation-hybris-apispecific-phone
+Conflicts: adaptation-hybris-apispecific-phone
+Package: adaptation-hybris-api29-phone
+Architecture: any
+Depends: adaptation-hybris (= ${binary:Version}),
+         adaptation-hybris-phone (= ${binary:Version}),
+         adaptation-hybris-api29 (= ${binary:Version}),
+         ofono-ril-binder-plugin,
+         ofono-config-ril-binder,
+         pulseaudio-modules-droid-hidl,
+         audiosystem-passthrough
+Description: Base metapackage for adaptation-hybris-api29 adaptations (phone variant)
+ This package depends on the required packages
+ to allow Droidian work on API 29 devices.
+
+Provides: adaptation-hybris-apispecific-phone-dual-sim
+Conflicts: adaptation-hybris-apispecific-phone-dual-sim
+Package: adaptation-hybris-api29-phone-dual-sim
+Architecture: any
+Depends: adaptation-hybris-api29-phone (= ${binary:Version}),
+         ofono-config-ril-binder-dual-sim
+Description: Base metapackage for adaptation-hybris-api29 adaptations (phone-dual-sim variant)
+ This package depends on the required packages
+ to allow Droidian work on API 29 devices.
