@@ -112,6 +112,11 @@ SUPPORTED_APILEVELS = {
                 "phone"          : COMMON_26_PHONE_PACKAGES,
                 "phone-dual-sim" : COMMON_26_DUAL_SIM_PACKAGES,
         },
+        33 : {
+                "standard"       : COMMON_16_PACKAGES + COMMON_30_PACKAGES + COMMON_26_PACKAGES,
+                "phone"          : COMMON_26_PHONE_PACKAGES,
+                "phone-dual-sim" : COMMON_26_DUAL_SIM_PACKAGES,
+        },
 }
 
 PROVIDES_TEMPLATE = """

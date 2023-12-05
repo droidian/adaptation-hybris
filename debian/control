@@ -213,3 +213,41 @@ Description: Base metapackage for adaptation-hybris-api32 adaptations (phone-dua
  This package depends on the required packages
  to allow Droidian work on API 32 devices.
 
+Provides: adaptation-hybris-apispecific-standard
+Conflicts: adaptation-hybris-apispecific-standard
+Package: adaptation-hybris-api33
+Architecture: any
+Depends: adaptation-hybris (= ${binary:Version}),
+         pulseaudio-config-droid,
+         droidian-quirks-api33,
+         pulseaudio-modules-droid-modern,
+         bluebinder,
+         timekeeper
+Description: Base metapackage for adaptation-hybris-api33 adaptations (standard variant)
+ This package depends on the required packages
+ to allow Droidian work on API 33 devices.
+
+Provides: adaptation-hybris-apispecific-phone
+Conflicts: adaptation-hybris-apispecific-phone
+Package: adaptation-hybris-api33-phone
+Architecture: any
+Depends: adaptation-hybris (= ${binary:Version}),
+         adaptation-hybris-phone (= ${binary:Version}),
+         adaptation-hybris-api33 (= ${binary:Version}),
+         ofono-ril-binder-plugin,
+         ofono-config-ril-binder,
+         pulseaudio-modules-droid-hidl,
+         audiosystem-passthrough
+Description: Base metapackage for adaptation-hybris-api33 adaptations (phone variant)
+ This package depends on the required packages
+ to allow Droidian work on API 33 devices.
+
+Provides: adaptation-hybris-apispecific-phone-dual-sim
+Conflicts: adaptation-hybris-apispecific-phone-dual-sim
+Package: adaptation-hybris-api33-phone-dual-sim
+Architecture: any
+Depends: adaptation-hybris-api33-phone (= ${binary:Version}),
+         ofono-config-ril-binder-dual-sim
+Description: Base metapackage for adaptation-hybris-api33 adaptations (phone-dual-sim variant)
+ This package depends on the required packages
+ to allow Droidian work on API 33 devices.
