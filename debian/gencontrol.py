@@ -29,6 +29,7 @@ COMMON_PACKAGES = [
 	"flatpak-hybris",
 	"flatpak-extension-gl-hybris",
 	"flatpak-extension-gl-hybris-tls-padding",
+	"flatpak-extension-gl-hybris-droidian-workarounds",
 ]
 
 # Common packages for phones

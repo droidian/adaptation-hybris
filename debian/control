@@ -33,7 +33,8 @@ Depends: droidian-quirks-writable-image,
          flashlightd,
          flatpak-hybris,
          flatpak-extension-gl-hybris,
-         flatpak-extension-gl-hybris-tls-padding
+         flatpak-extension-gl-hybris-tls-padding,
+         flatpak-extension-gl-hybris-droidian-workarounds
 Description: Base metapackage for adaptation-hybris adaptations (standard variant)
  This package depends on the required packages
  to allow Droidian work on Android devices.
