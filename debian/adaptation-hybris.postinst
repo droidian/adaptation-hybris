@@ -1,0 +1,11 @@
+#!/bin/sh
+
+configure() {
+	apt-mark manual adaptation-hybris-common adaptation-hybris-phosh || true
+}
+
+case "$1" in
+	"configure")
+		configure
+		;;
+esac

@@ -12,8 +12,8 @@ Vcs-Git: https://github.com/droidian/adaptation-hybris
 
 Package: adaptation-hybris
 Architecture: any
-Depends: adaptation-hybris-common (= ${binary:Version}),
-         adaptation-hybris-phosh (= ${binary:Version})
+Pre-Depends: adaptation-hybris-common (= ${binary:Version}),
+             adaptation-hybris-phosh (= ${binary:Version})
 Description: Base metapackage for adaptation-hybris adaptations (transitional package)
  This is just a transitional package for adaptation-hybris-common.
  You can remove it.
