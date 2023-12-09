@@ -14,7 +14,6 @@ COMMON_PACKAGES = [
 	"lxc-android",
 	"libhybris",
 	"libhybris-utils",
-	"phosh-config-hwcomposer | cutie-shell-config-hybris",
 	"udev-config-hybris",
 	"hadess-sensorfw-proxy",
 	"droidian-quirks-hybris-gl",
@@ -32,9 +31,17 @@ COMMON_PACKAGES = [
 	"flatpak-extension-gl-hybris-droidian-workarounds",
 ]
 
+COMMON_PHOSH = [
+	"phosh-config-hwcomposer",
+]
+
+COMMON_CUTIE = [
+	"cutie-shell-config-hybris",
+]
+
 # Common packages for phones
 COMMON_PHONE_PACKAGES = [
-	"adaptation-hybris (= ${binary:Version})",
+	"adaptation-hybris-common (= ${binary:Version})",
 	"ofono",
 	"ofono-scripts",
 	"ofono2mm",
@@ -42,14 +49,14 @@ COMMON_PHONE_PACKAGES = [
 
 # Devtools packages
 COMMON_DEVTOOLS_PACKAGES = [
-	"adaptation-hybris (= ${binary:Version})",
+	"adaptation-hybris-common (= ${binary:Version})",
 	"libhybris-test",
 	"hybris-usb",
 ]
 
 # Common packages for api levels 16+
 COMMON_16_PACKAGES = [
-	"adaptation-hybris (= ${binary:Version})",
+	"adaptation-hybris-common (= ${binary:Version})",
 	"pulseaudio-config-droid",
 	"droidian-quirks-api%(level)d",
 ]
@@ -72,7 +79,7 @@ COMMON_26_PACKAGES = [
 
 # Common phone packages for api levels 26+ (8+)
 COMMON_26_PHONE_PACKAGES = [
-	"adaptation-hybris (= ${binary:Version})",
+	"adaptation-hybris-common (= ${binary:Version})",
 	"adaptation-hybris-phone (= ${binary:Version})",
 	"adaptation-hybris-api%(level)s (= ${binary:Version})",
 	"ofono-ril-binder-plugin",
@@ -89,9 +96,11 @@ COMMON_26_DUAL_SIM_PACKAGES = [
 
 SUPPORTED_APILEVELS = {
 	0 : {
-		"standard" : COMMON_PACKAGES,
+		"common" : COMMON_PACKAGES,
 		"phone"    : COMMON_PHONE_PACKAGES,
 		"devtools" : COMMON_DEVTOOLS_PACKAGES,
+		"phosh"    : COMMON_PHOSH,
+		"cutie"    : COMMON_CUTIE,
 	},
 	28 : {
 		"standard"       : COMMON_16_PACKAGES + COMMON_16_29_PACKAGES + COMMON_26_PACKAGES,

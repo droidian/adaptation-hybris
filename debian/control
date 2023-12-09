@@ -12,6 +12,14 @@ Vcs-Git: https://github.com/droidian/adaptation-hybris
 
 Package: adaptation-hybris
 Architecture: any
+Depends: adaptation-hybris-common (= ${binary:Version}),
+         adaptation-hybris-phosh (= ${binary:Version})
+Description: Base metapackage for adaptation-hybris adaptations (transitional package)
+ This is just a transitional package for adaptation-hybris-common.
+ You can remove it.
+
+Package: adaptation-hybris-common
+Architecture: any
 Depends: droidian-quirks-writable-image,
          android-base-passwd,
          android-base-files,
@@ -19,7 +27,6 @@ Depends: droidian-quirks-writable-image,
          lxc-android,
          libhybris,
          libhybris-utils,
-         phosh-config-hwcomposer | cutie-shell-config-hybris,
          udev-config-hybris,
          hadess-sensorfw-proxy,
          droidian-quirks-hybris-gl,
@@ -35,13 +42,13 @@ Depends: droidian-quirks-writable-image,
          flatpak-extension-gl-hybris,
          flatpak-extension-gl-hybris-tls-padding,
          flatpak-extension-gl-hybris-droidian-workarounds
-Description: Base metapackage for adaptation-hybris adaptations (standard variant)
+Description: Base metapackage for adaptation-hybris adaptations (common variant)
  This package depends on the required packages
  to allow Droidian work on Android devices.
 
 Package: adaptation-hybris-phone
 Architecture: any
-Depends: adaptation-hybris (= ${binary:Version}),
+Depends: adaptation-hybris-common (= ${binary:Version}),
          ofono,
          ofono-scripts,
          ofono2mm
@@ -51,10 +58,24 @@ Description: Base metapackage for adaptation-hybris adaptations (phone variant)
 
 Package: adaptation-hybris-devtools
 Architecture: any
-Depends: adaptation-hybris (= ${binary:Version}),
+Depends: adaptation-hybris-common (= ${binary:Version}),
          libhybris-test,
          hybris-usb
 Description: Base metapackage for adaptation-hybris adaptations (devtools variant)
+ This package depends on the required packages
+ to allow Droidian work on Android devices.
+
+Package: adaptation-hybris-phosh
+Architecture: any
+Depends: phosh-config-hwcomposer
+Description: Base metapackage for adaptation-hybris adaptations (phosh variant)
+ This package depends on the required packages
+ to allow Droidian work on Android devices.
+
+Package: adaptation-hybris-cutie
+Architecture: any
+Depends: cutie-shell-config-hybris
+Description: Base metapackage for adaptation-hybris adaptations (cutie variant)
  This package depends on the required packages
  to allow Droidian work on Android devices.
 
@@ -62,7 +83,7 @@ Provides: adaptation-hybris-apispecific-standard
 Conflicts: adaptation-hybris-apispecific-standard
 Package: adaptation-hybris-api28
 Architecture: any
-Depends: adaptation-hybris (= ${binary:Version}),
+Depends: adaptation-hybris-common (= ${binary:Version}),
          pulseaudio-config-droid,
          droidian-quirks-api28,
          pulseaudio-modules-droid-jb2q,
@@ -76,7 +97,7 @@ Provides: adaptation-hybris-apispecific-phone
 Conflicts: adaptation-hybris-apispecific-phone
 Package: adaptation-hybris-api28-phone
 Architecture: any
-Depends: adaptation-hybris (= ${binary:Version}),
+Depends: adaptation-hybris-common (= ${binary:Version}),
          adaptation-hybris-phone (= ${binary:Version}),
          adaptation-hybris-api28 (= ${binary:Version}),
          ofono-ril-binder-plugin,
@@ -101,7 +122,7 @@ Provides: adaptation-hybris-apispecific-standard
 Conflicts: adaptation-hybris-apispecific-standard
 Package: adaptation-hybris-api29
 Architecture: any
-Depends: adaptation-hybris (= ${binary:Version}),
+Depends: adaptation-hybris-common (= ${binary:Version}),
          pulseaudio-config-droid,
          droidian-quirks-api29,
          pulseaudio-modules-droid-jb2q,
@@ -115,7 +136,7 @@ Provides: adaptation-hybris-apispecific-phone
 Conflicts: adaptation-hybris-apispecific-phone
 Package: adaptation-hybris-api29-phone
 Architecture: any
-Depends: adaptation-hybris (= ${binary:Version}),
+Depends: adaptation-hybris-common (= ${binary:Version}),
          adaptation-hybris-phone (= ${binary:Version}),
          adaptation-hybris-api29 (= ${binary:Version}),
          ofono-ril-binder-plugin,
@@ -140,7 +161,7 @@ Provides: adaptation-hybris-apispecific-standard
 Conflicts: adaptation-hybris-apispecific-standard
 Package: adaptation-hybris-api30
 Architecture: any
-Depends: adaptation-hybris (= ${binary:Version}),
+Depends: adaptation-hybris-common (= ${binary:Version}),
          pulseaudio-config-droid,
          droidian-quirks-api30,
          pulseaudio-modules-droid-modern,
@@ -154,7 +175,7 @@ Provides: adaptation-hybris-apispecific-phone
 Conflicts: adaptation-hybris-apispecific-phone
 Package: adaptation-hybris-api30-phone
 Architecture: any
-Depends: adaptation-hybris (= ${binary:Version}),
+Depends: adaptation-hybris-common (= ${binary:Version}),
          adaptation-hybris-phone (= ${binary:Version}),
          adaptation-hybris-api30 (= ${binary:Version}),
          ofono-ril-binder-plugin,
@@ -179,7 +200,7 @@ Provides: adaptation-hybris-apispecific-standard
 Conflicts: adaptation-hybris-apispecific-standard
 Package: adaptation-hybris-api32
 Architecture: any
-Depends: adaptation-hybris (= ${binary:Version}),
+Depends: adaptation-hybris-common (= ${binary:Version}),
          pulseaudio-config-droid,
          droidian-quirks-api32,
          pulseaudio-modules-droid-modern,
@@ -193,7 +214,7 @@ Provides: adaptation-hybris-apispecific-phone
 Conflicts: adaptation-hybris-apispecific-phone
 Package: adaptation-hybris-api32-phone
 Architecture: any
-Depends: adaptation-hybris (= ${binary:Version}),
+Depends: adaptation-hybris-common (= ${binary:Version}),
          adaptation-hybris-phone (= ${binary:Version}),
          adaptation-hybris-api32 (= ${binary:Version}),
          ofono-ril-binder-plugin,
@@ -218,7 +239,7 @@ Provides: adaptation-hybris-apispecific-standard
 Conflicts: adaptation-hybris-apispecific-standard
 Package: adaptation-hybris-api33
 Architecture: any
-Depends: adaptation-hybris (= ${binary:Version}),
+Depends: adaptation-hybris-common (= ${binary:Version}),
          pulseaudio-config-droid,
          droidian-quirks-api33,
          pulseaudio-modules-droid-modern,
@@ -232,7 +253,7 @@ Provides: adaptation-hybris-apispecific-phone
 Conflicts: adaptation-hybris-apispecific-phone
 Package: adaptation-hybris-api33-phone
 Architecture: any
-Depends: adaptation-hybris (= ${binary:Version}),
+Depends: adaptation-hybris-common (= ${binary:Version}),
          adaptation-hybris-phone (= ${binary:Version}),
          adaptation-hybris-api33 (= ${binary:Version}),
          ofono-ril-binder-plugin,
